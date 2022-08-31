@@ -1,0 +1,51 @@
+{{>links}}
+{{>navbar}}
+<div class="container-fluid main_header">  
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="main_content">
+                    <form class="temp_form">
+                    <input type="text" id="cityname" placeholder="Enter your City name" autocomplete="off">
+                    <input type="button" value="Search" id="submitBtn">
+                    </form>
+                </div>
+
+                <div class="temp_info">
+                    <div class="top_layer ">
+                        <p id="day">Day</p>
+                        <p id="today_date">Date</p>
+                    </div>
+
+                    <div class="middle_layer ">
+                         <p id="alert">Plese Enter correct cityname to know the weather</p>
+                    </div>
+
+                    <div class="main_layer">
+                        <div class="name_description">
+                        <p id="city_name">CityName</p>
+                        </div>
+                    </div>
+                        <div class="status">
+                        <p id="temp"><span id="temp_real_value">0</span><sup>o</sup>C</p>
+                        <p id="temp_status"><i class="fa-solid fa-cloud fa-1x" style="color: skyblue;"></i></p>
+                        </div>
+                </div>
+               
+            </div>
+        </div> 
+        <div class="weather_conditions">
+            <div class="title">Here are some description for different weather conditions : </div>
+            <h1>Clouds<p> : A cloud is made of water drops or ice crystals floating in the sky. There are many kinds of clouds. Clouds are an important part of Earth's weather.</p></h1>
+            <h1>Sunny<p> : Sunny means shining with bright sunlight, like a beautiful sunny Saturday at the beach. It can also mean cheerful, like your sunny</p></h1>
+            <h1>Rains<p> : You can describe it as steady or constant: We've had constant rain since Tuesday. Heavy rainfall is a downpour, and it can be quite sudden.</p></h1>
+            <h1>Haze<p> : Haze is caused when sunlight encounters tiny pollution particles in the air. Some light is absorbed by particles. Other light is scattered away before it reaches an observer..</p></h1>
+            <h1>Thunderstorm<p> : Thunderstorms form when warm, moist air rises into cold air. The warm air becomes cooler, which causes moisture, called water vapor, to form small water droplets — a process called condensation.The cooled air drops lower in the atmosphere, warms, and rises again.</p></h1>
+        </div>         
+</div>
+            
+
+{{>footer}}
+<script src="javascripts/main.js"></script>
+</body>
+
+</html>

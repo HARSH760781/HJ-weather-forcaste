@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@1,8..30,100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ :root {
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_menu {
+    background-color: var(--main-bg);
+}
+
+.navbar {
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+
+.navbar li a {
+    margin-left: 2rem;
+}
+
+.navbar a:hover {
+    color: red;
+}
+
+.navbar a {
+    color: rgb(255, 250, 250);
+    font-size: 1.8rem;
+}
+
+.navbar-toggler {
+    background-color: grey;
+}
+
+.fa-snowflake {
+    color: #0097e6;
+    transition: all linear;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* main-header */
+
+.main_header_left {
+    height: 75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-start; */
+}
+
+.main_header_left p {
+    font-size: 2rem;
+}
+
+.main_header_left .text_color {
+    color: rebeccapurple;
+}
+
+.main_header_left .btn {
+    border: none;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+.main_header_left .btn:hover {
+    box-shadow: 0 8px 6px -6px #0097e6;
+}
+
+.main_header_left h1 {
+    font-size: 4rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+
+.main_header_right {
+    height: 75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_header_right .image {
+    filter: drop-shadow(0 1.5rem 1rem red);
+}
+
+.main_header_right .image img {
+    width: 35rem;
+    height: 35rem;
+}
+
+.main_header_right figure img {
+    filter: drop-shadow(0 1.5rem 1rem red);
+}
+
+
+/* weather page */
+
+.temp_form {
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    margin-top: 5rem;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+
+.temp_form #cityname {
+    height: 50%;
+    width: 50%;
+    border-radius: 10rem;
+    padding-left: 5%;
+    background: #4b2d4f;
+    font-size: 2rem;
+    color: white;
+}
+
+#submitBtn {
+    height: 35%;
+    width: 10%;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    background: #8b75f4;
+    color: wheat;
+}
+
+.temp_info {
+    width: 45rem;
+    margin: auto;
+    min-height: 20rem;
+    background: #25254c;
+    color: white;
+    border-radius: 1rem;
+}
+
+.top_layer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.top_layer p {
+    padding: 1rem 0;
+}
+
+
+/* .main_layer {} */
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    align-items: center;
+}
+
+.status p {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.main_layer p {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.main_layer #city_name {
+    padding: 0 3rem;
+}
+
+.main_layer .name_description {
+    display: flex;
+    min-height: 10rem;
+    background: #2e2c4d;
+    align-items: center;
+}
+
+.main_layer .status .temp_status {
+    animation: zoom 1500ms infinite alternate;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    padding-left: 1%;
+}
+
+.weather_conditions h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 2rem;
+    display: flex;
+    color: blue;
+}
+
+.weather_conditions p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    padding: 1rem;
+}
+
+.aboutus {
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    width: 80%;
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(rgb(239, 197, 197), rgb(190, 190, 242));
+    border-radius: 3rem;
+    color: rgb(136, 41, 28);
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.data_hide {
+    visibility: hidden;
+}
+
+.main_layer .name_description p {
+    font-size: 2rem;
+}
+
+.middle_layer {
+    width: 100%;
+    margin: auto;
+    min-height: 5rem;
+    background-color: #323254;
+}
+
+.middle_layer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+footer {
+    width: 100%;
+    margin-top: auto;
+    background-color: var(--main-bg);
+}
+
+footer p {
+    margin: 0;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    line-height: 5rem;
+    font-size: 2.4rem;
+}
+
+
+/* Responsive code */
+
+@media (max-width:787px) {
+    .main_header {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .main_header_left {
+        height: auto;
+        margin-top: 10rem;
+        padding-left: 5rem;
+    }
+    .main_header_right {
+        height: auto;
+        margin-top: 10rem;
+    }
+    .temp_form {
+        width: auto;
+    }
+}
+
+@media (max-width:900px) {
+    .main_header_right .image img {
+        width: 30rem;
+        height: 30rem;
+    }
+}
