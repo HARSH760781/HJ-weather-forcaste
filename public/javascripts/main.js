@@ -45,10 +45,11 @@ const date = today.getDate();
 
 
 submitBtn.addEventListener('click', async(event) => {
-    console.log(api_key);
+    // console.log(api_key);
     let cityVal = cityname.value;
     if (cityVal === "") {
         Alert.innerHTML = "Please Enter any City Name before search"
+        temp_status.innerHTML = "Description"
     } else {
         try {
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&appid=f8cf5085af2b67783d1c72b275df1dd4&units=metric`
@@ -60,7 +61,7 @@ submitBtn.addEventListener('click', async(event) => {
             temp_status.innerText = objdata[0].weather[0].main;
             // Temperature status....
             const tempmood = temp_status.innerText;
-            // const tempmood = 'clear';
+            console.log(tempmood);
             if (tempmood === 'Clouds') {
                 temp_status.innerHTML = `<i class="fa-solid fa-cloud fa-2x" style = "color:skyblue"></i>`
             } else if (tempmood === 'Sunny' || tempmood === 'Clear') {
@@ -68,7 +69,7 @@ submitBtn.addEventListener('click', async(event) => {
             } else if (tempmood === 'Snow') {
                 temp_status.innerHTML = `<i class="fa-solid fa-snowflake fa-2x" style="color:white"></i>`
             } else if (tempmood === 'Rain') {
-                temp_status.innerHTML = `<i class="fa-solid fa-cloud-hail fa-2x" style="color:grey"></i>`
+                temp_status.innerHTML = `<i class="fa-solid fa-cloud-rain fa-2x" style="color:blue"></i>`
             } else if (tempmood === 'Haze') {
                 temp_status.innerHTML = `<i class="fa-solid fa-rainbow fa-2x" style="color:#FF0000"></i>`
             } else if (tempmood === "Thunderstorm") {
@@ -84,6 +85,7 @@ submitBtn.addEventListener('click', async(event) => {
             middle_layer.classList.remove('data_hide')
             temp_real_value.innerText = '0';
             city_name.innerHTML = "City Name"
+            temp_status.innerHTML = "Description"
                 // main_layer.classList.add('data_hide')
 
         }

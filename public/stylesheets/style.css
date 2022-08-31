@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
 }
@@ -48,7 +48,7 @@ body {
 
 .fa-snowflake {
     color: #0097e6;
-    transition: all linear;
+    /* transition: all linear; */
     animation: rotate 2s linear infinite;
 }
 
@@ -61,8 +61,20 @@ body {
     }
 }
 
+.fa-sun {
+    color: yellow;
+    /* animation; */
+}
+
 
 /* main-header */
+
+
+/* .main_header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+} */
 
 .main_header_left {
     height: 75rem;
@@ -205,8 +217,8 @@ body {
     align-items: center;
 }
 
-.main_layer .status .temp_status {
-    animation: zoom 1500ms infinite alternate;
+.status #temp_status {
+    animation: zoom 1s infinite alternate;
 }
 
 .title {
@@ -246,10 +258,10 @@ body {
 
 @keyframes zoom {
     from {
-        transform: scale(0.8);
+        transform: scale( 0.8);
     }
     to {
-        transform: scale(1.2);
+        transform: scale( 1.2);
     }
 }
 
@@ -295,23 +307,91 @@ footer p {
 
 /* Responsive code */
 
-@media (max-width:787px) {
+@media (max-width:768px) {
     .main_header {
         height: 100%;
         display: flex;
         flex-direction: column;
     }
     .main_header_left {
-        height: auto;
-        margin-top: 10rem;
-        padding-left: 5rem;
+        height: 25rem;
+        align-items: center;
     }
     .main_header_right {
         height: auto;
-        margin-top: 10rem;
+        align-items: center;
+        margin-bottom: 2rem;
     }
-    .temp_form {
+    .carousel-item {
+        width: 100%;
+    }
+    .main_header_right .temp_form {
         width: auto;
+    }
+    .main_content {
+        margin: 1rem;
+    }
+    .main_content .temp_info {
+        width: 60%;
+    }
+    .main_content .temp_form {
+        display: flex;
+        flex-direction: column;
+    }
+    .weather_conditions p {
+        font-size: 1.5rem;
+        padding: 0 0 0 1rem;
+    }
+    .weather_conditions h1 {
+        font-size: 2rem;
+    }
+    #temp_status {
+        font-size: 1.2rem;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+    .main_header_left h1 {
+        font-size: 2rem;
+        margin: 0;
+    }
+    footer p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (width:768px) {
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media (max-width:306px) {
+    .carousel-inner {
+        margin: 0 0 2rem 0;
+    }
+    .title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:520px) {
+    .main_content .temp_info {
+        width: 100%;
+    }
+    .main_content .temp_form #cityname {
+        width: 80%;
+    }
+    .main_content .temp_form #submitBtn {
+        width: 30%;
+    }
+}
+
+@media (max-width:268px) {
+    footer {
+        position: absolute;
+        bottom: 0px;
     }
 }
 
